@@ -1,0 +1,579 @@
+$color-0: #162059;
+$color-1: #8c082c;
+$color-2: #548dbf;
+$color-3: #d9af32;
+$color-4: #d7c6b252;
+$color-5: #bf8c2c;
+
+@mixin borders($bColor) {
+  border: 1px solid $bColor;
+  box-shadow: 0px 0px 10px white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Grandstander&display=swap');
+@import url(//db.onlinewebfonts.com/c/8d1e065ed0732b1a7cbd779284e1d88b?family=Neometric);
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: $color-4;
+}
+
+.container {
+  width: 90%;
+  margin: 35px auto;
+  background-color: white;
+  @include borders(white);
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+}
+
+.container__header {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* ********** HEADER ********** */
+.container__header__title {
+  display: block;
+  flex-grow: 1;
+  flex-basis: 65%;
+  margin: 30px 20px;
+}
+
+.container__header__a {
+  font-style: italic;
+  font-weight: 900;
+  color: $color-3;
+  text-shadow: 0px 1px 1px $color-0, -1px 2px 1px $color-0,
+    -2px 3px 1px $color-0;
+  letter-spacing: 3px;
+  transition: all 300ms;
+  text-decoration: none;
+}
+
+.container__header__a:hover {
+  text-shadow: 0px 1px 1px $color-0, 1px 2px 1px $color-0, 2px 3px 1px $color-0;
+}
+
+.container__header__menu {
+  flex-grow: 1;
+  margin: 10px 25px;
+  display: inline-flex;
+}
+
+.header__menu__list {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  align-items: center;
+}
+
+.header__menu__element {
+  padding: 0px 10px;
+}
+
+.header__menu__a {
+  text-decoration: none;
+  color: $color-0;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: all 200ms;
+}
+
+.header__menu__a:hover {
+  color: $color-2;
+}
+
+/* ********** INDEX ********** */
+.container__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__main__index {
+  display: flex;
+  min-height: 400px;
+  flex-grow: 1;
+  flex-basis: 50%;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main__index__img {
+  width: 60%;
+}
+
+.main__index__text {
+  font-weight: 900;
+  color: $color-2;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: all 300ms;
+  text-decoration: none;
+}
+
+.main__index__citys {
+  display: flex;
+  padding: 5%;
+  flex-wrap: wrap;
+}
+
+.main__index__city {
+  height: 150px;
+  flex-grow: 1;
+  flex-basis: 30%;
+  margin: 1%;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.main__index__a {
+  text-decoration: none;
+  color: $color-3;
+}
+
+.main__idnex__img {
+  width: 100%;
+  height: 70%;
+  transition: all 300ms;
+}
+
+.main__index__a:hover .main__idnex__img {
+  transform: scale(1.1);
+  margin-bottom: 5px;
+}
+
+.main__indes__text {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ********** DESCRIPCIONES ********** */
+.desc__title{
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 50px;
+  color: $color-5;
+  letter-spacing: 5px;
+  text-shadow: 0px 1px 1px $color-0, -1px 2px 1px $color-0,
+    -2px 3px 1px $color-0;
+}
+
+.desc__descripcion{
+  display: block;
+  min-height: 10vh;
+  margin: 30px 100px;
+  color: rgb(61, 59, 59);
+  font-size: 15px;
+}
+
+.desc__a{
+  display: block;
+  text-align: center;
+  margin: 60px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-5;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: all 300ms;
+}
+
+.desc__a:hover{
+  color: $color-0;
+}
+
+/* ********** TOURS ASIDE ********** */
+.tours__main {
+  display: flex;
+  justify-content: space-between;
+}
+.tours__main__aside {
+  flex-basis: 16%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 1% 0px;
+  padding: 1%;
+  flex-grow: 1;
+}
+
+.aside__title {
+  @include borders($color-4);
+  border-left: 0px;
+  border-right: 0px;
+}
+
+.aside__title__text {
+  display: block;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.aside__list {
+  list-style: none;
+}
+
+.aside__list__element {
+  display: block;
+  margin: 10% 0px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.aside__list__a {
+  display: block;
+  text-decoration: none;
+  color: $color-0;
+  transition: all 500ms;
+  font-weight: bold;
+  background-color: $color-3;
+}
+
+.aside__list__a:hover {
+  background-color: $color-2;
+  color: $color-3;
+  border-radius: 7px;
+}
+
+/* ********** PRINCIPAL TOURS ********** */
+.tours__main__principal {
+  display: inline-flex;
+  flex-flow: row wrap;
+  flex-basis: 82%;
+  margin: 1% 0px;
+  padding: 1% 0px;
+  flex-grow: 1;
+}
+
+.principal__box {
+  @include borders($color-4);
+  flex-basis: 29%;
+  height: auto;
+  overflow: hidden;
+  margin: 0px 2% 2%;
+  transition: all 500ms;
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+
+.principal__box:hover{
+  transform: scale(1.1);
+}
+
+.principal__box__a {
+  text-decoration: none !important;
+}
+
+.principal__box__title{
+  padding-left: 10px;
+  font-size: 17px;
+  color: #333;
+}
+
+.principal__box__img {
+  width: 100%;
+  height: 150px;
+}
+
+.principal__box__text {
+  color: gray;
+  font-size: 15px;
+  padding: 15px;
+  transition: all 300ms;
+}
+
+.container__footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100px;
+}
+
+/* ********** WEATHER ********** */
+.weather{
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: "Neometric";
+
+}
+
+.weather__title{
+  text-align: center;
+  font-size: 45px;
+  color: $color-0;
+}
+
+.weather__card{
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  padding: 20px;
+  display: flex;
+  width: 50%;
+  border-radius: 15px;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  background-color: #6A9AD9;
+}
+
+.weather__card h2{
+  font-size: 60px;
+  color: #1B4159;
+  letter-spacing: 4px;
+}
+
+.weather__card p{
+  font-size: 25px;
+}
+
+.weather__card img{
+  width: 140px;
+}
+
+.weather__form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.weather__form__list{
+  width: 250px;
+  height: 45px;
+  text-align: center;
+  border: 1px solid #ccc;
+  letter-spacing: 2px;
+  font-size: 17px;
+  outline: none;
+  overflow: hidden;
+}
+
+.weather__form__button{
+  width: auto;
+  padding: 5px 15px;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 1px solid $color-2;
+  background-color: $color-2;
+  color: white;
+  font-size: 20px;
+  transition: all 500ms;
+}
+
+.weather__form__button:hover{
+  letter-spacing: 5px;
+  background-color: #6A9AD9;
+  color: #1B4159;
+  border: 0px;
+  box-shadow: 0px 0px 2px #1B4159;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #09f;
+  margin: 0 auto;
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ********** FOOTER ********** */
+.footer__title {
+  flex-grow: 1;
+  flex-basis: auto;
+  padding-left: 30px;
+}
+
+.footer__title__text {
+  font-style: italic;
+  font-size: 30px;
+  color: gray;
+}
+
+.footer__copy {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer__copy__text {
+  display: inline;
+  padding-right: 25px;
+}
+
+/* ********** TABLET ********** */
+@media (max-width: 900px) {
+  .container {
+    margin: 0px;
+    width: 100%;
+  }
+
+  .container__header {
+    flex-direction: column;
+  }
+
+  .container__header__title {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .container__header__menu {
+    flex-basis: 100%;
+  }
+
+  .header__menu__list {
+    justify-content: space-around;
+  }
+
+  .container__main {
+    flex-direction: column;
+  }
+
+  .desc__descripcion{
+    margin: 30px 50px;
+  }
+
+  .weather__card{
+    width: 70%;
+  }
+
+  .principal__box {
+    flex-basis: 45%;
+  }
+
+  .tours__main {
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 5%;
+  }
+
+  .tours__main__aside {
+    display: flex;
+    flex-basis: 60%;
+  }
+  .aside__title {
+    width: 50%;
+    margin: 0px auto;
+  }
+
+  .aside__list {
+    margin-top: 25px;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .aside__list__element {
+    margin: 0px 1% 1%;
+    width: 40%;
+  }
+}
+
+/* ********** MOVIL ********** */
+@media (max-width: 500px) {
+  .container__header__menu {
+    flex-basis: 100%;
+    margin: 0px;
+  }
+
+  .header__menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+
+  .header__menu__element {
+    padding: 20px;
+    flex-basis: 25%;
+    text-align: center;
+  }
+
+  .tours__main__principal {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+
+  .main__index__img{
+    height: 60vh;
+    width: 100%;
+  }
+
+  .principal__box{
+    flex-basis: 100%;
+  }
+
+  .aside__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .aside__list__element {
+    display: block;
+    width: 70% !important;
+    margin-bottom: 2% !important;
+  }
+
+  .aside__list__a:hover {
+    border-radius: 0px !important;
+  }
+
+  .weather__card{
+    width: 80%;
+  }
+
+  .container__main__principal {
+    padding: 5%;
+  }
+
+  .principal__box {
+    flex-basis: 70%;
+    margin-bottom: 10%;
+  }
+
+  .footer__title {
+    display: block;
+    text-align: center;
+    padding-left: 0px !important;
+  }
+  .footer__copy {
+    display: block;
+    text-align: center;
+    padding-left: 35px;
+  }
+}

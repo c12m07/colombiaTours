@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+
+<body>
+  
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colombia Tours</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+  <body>
+    <div class="container">
+      <header class="container__header">
+        <h1 class="container__header__title">
+          <a href="./index.html" class="container__header__a">GRAN COLOMBIA - Tours</a>
+        </h1>
+        <nav class="container__header__menu">
+          <ul class="header__menu__list">
+            <li class="header__menu__element">
+              <a class="header__menu__a" href="../index.html">INICIO</a>
+            </li>
+            <li class="header__menu__element">
+              <a class="header__menu__a" href="../tours/tours.html">TOURS</a>
+            </li>
+            <li class="header__menu__element">
+              <a class="header__menu__a" href="#">WEATHER</a>
+            </li>
+            <li class="header__menu__element">
+              <a class="header__menu__a" href="#">CONTACTO</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="weather__main">
+
+        <section class="weather">
+          <h1 class="weather__title">Buscador de Clima</h1>
+      
+          <div class="weather__card" id="card"></div>
+      
+          <div class="spinner" id="spinner"></div>
+      
+          <form class="weather__form">
+            <select name="ciudad" id="ciudad" class="weather__form__list">
+              <option value="3689982">AMAZONAS</option>
+              <option value="3689147">BARRANQUILLA</option>
+              <option value="3688689">BOGOTÁ</option>
+              <option value="3687925">CALI</option>
+              <option value="3687238">CARTAGENA</option>
+              <option value="3674962">MEDELLÍN</option>
+              <option value="3668605">SANTA MARTA</option>
+            </select>
+      
+            <input type="submit" value="Buscar clima" id="btn" class="weather__form__button">
+          </form>
+      
+      
+        </section>
+      </div>
+
+      <footer class="container__footer">
+        <div class="footer__title">
+          <h2 class="footer__title__text">GRAN COLOMBIA - Tours</h2>
+        </div>
+        <div class="footer__copy">
+          <p class="footer__copy__text">Carlos Martinez WEB &copy; 2022</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://kit.fontawesome.com/58a48b9209.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./weatherApi.js"></script>
+  </body>
+
+</html>
